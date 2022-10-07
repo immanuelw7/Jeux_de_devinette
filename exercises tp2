@@ -1,0 +1,5 @@
+x = input('Entrez votre nom:')
+print('hello', x)
+nbderange = int(input('Combien de rangée de étoiles voulées vous:'))
+for i in range(nbderange + 1, 0,-1):
+        print("*"*i)
