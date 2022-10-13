@@ -4,7 +4,10 @@
 import random
 def jeuxdevinette():
 # on crée une variable qui s'appellera NOMBRE, cette variable a pour but de choisir un nombre random entre 1-100, donc cela serait le nombre de l'ordinateur qu'on devra essayer de deviner
-    NOMBRE = random.randint(1,100)
+    lol = int(input("Entrez votre premier nombre que voulez jouer sur"))
+    lol2 = int(input("Entrez votre deuxième nombre que vous voules sur"))
+    
+    NOMBRE = random.randint(lol,lol2)
 #on cée une autre variable qui s'appellera "le_nombre_de_essai" et le nombre d'essai est le nombre de fois que la personne va faire un guess et le nombre d'essaie augmente a chaque fois
     le_nombre_de_essai = 0
 #ainsi, on créera une autre variable pour le nombre d'essaie maxi, on aurait pu le faire de facon que a chaque fois il prend un guess le nombre de chance restante diminue mais je préferes de cette facon si, donc l'orsque la personne aura utiliser dix guess, le jeux sera terminer
@@ -18,7 +21,7 @@ def jeuxdevinette():
 #jouer = vrai
     jouer = True
 #print la phrase de bienvenue
-    print('Bonjour, le but du jeux est de deviner le nombre choisi entre 1-100 par le systeme en le moin de coup possible, vous avez 10 chance au max')
+    print('Bonjour, le but du jeux est de deviner le nombre choisi entre',lol,'-',lol2,' par le systeme en le moin de coup possible, vous avez 10 chance au max')
 # on crée un while jouer, tous se retrouve dedans, tant qu'il est vrai
     while jouer:
 #tant que x est inégale au nombre de l'ordi et que le nombre d'essaie est plus que dix
@@ -60,3 +63,4 @@ def jeuxdevinette():
                 print('le nombre est', NOMBRE)
                 retryy = input("ah rip vous avez utiliser tous vos essaie, vous êtes pas très bon, get good, voulez vous recommencer o/n!:")
 jeuxdevinette()
+
