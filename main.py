@@ -87,7 +87,7 @@ def jeuxdevinette():
                 jouer = False
                 #si il veut recommencer
             elif retryy == "o":
-                #jouer = faux
+                jouer = False
                 #on recommence le jeux
                 jeuxdevinette()
             # si il utilise tous ses essais
